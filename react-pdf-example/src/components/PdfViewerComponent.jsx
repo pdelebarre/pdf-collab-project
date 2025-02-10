@@ -24,6 +24,10 @@ export default function PdfViewerComponent(props) {
         authPayload: { jwt: props.token },
         baseUrl: `${window.location.origin}/`,
         instant: true,
+        toolbarItems: [
+          ...PSPDFKit.defaultToolbarItems,
+          { type: "content-editor" },
+        ],
       });
     })();
 
