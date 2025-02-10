@@ -1,0 +1,9 @@
+fe/node_modules
+fe/private.key
+frontend/node_modules
+backend/target
+nodebe/private.pem
+nodebe/node_modules
+fe/assets
+frontend/src/assets
+react-pdf-example/public/pspdfkit-lib
