@@ -1,7 +1,0 @@
-{
-  "type": "module",
-  "dependencies": {
-    "jsonwebtoken": "^9.0.2",
-    "pspdfkit": "^2024.8.1"
-  }
-}
