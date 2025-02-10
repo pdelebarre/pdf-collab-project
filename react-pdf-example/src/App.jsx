@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App" style={{ width: "100vw" }}>
       <div className="PDF-viewer">
-        <PdfViewerComponent document={"document.pdf"} />
+        <PdfViewerComponent documentId={documentId} token={token} />
       </div>
     </div>
   );

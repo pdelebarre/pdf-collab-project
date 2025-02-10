@@ -17,12 +17,13 @@ export default function PdfViewerComponent(props) {
 
       instance = await PSPDFKit.load({
         // Container where PSPDFKit should be mounted.
-        container,
+        container: "#pspdfkit",
+        serverUrl: "http://localhost:5001/",
         // The document to open.
-        document: props.document,
-        // Use the public directory URL as a base URL. PSPDFKit will download its library assets from here.
-
+        documentId: props.documentId,
+        authPayload: { jwt: props.token },
         baseUrl: `${window.location.origin}/`,
+        instant: true,
       });
     })();
 
@@ -30,5 +31,5 @@ export default function PdfViewerComponent(props) {
   }, []);
 
   // This div element will render the document to the DOM.
-  return <div ref={containerRef} style={{ width: "100%", height: "100vh" }} />;
+  return <div id="pspdfkit" ref={containerRef} style={{ width: "100%", height: "100vh" }} />;
 }
